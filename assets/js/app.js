@@ -48,8 +48,16 @@ function populateTable() {
         for (const flightInfo in flight) {
             // Create each table row for flight info
             const tableCell = document.createElement('td');
-            console.log('flightInfo', flightInfo);
-            tableCell.innerText = flight[flightInfo];   // Get flight info Value
+            // Get each letter of the flight info value
+            const word = Array.from(flight[flightInfo]);
+            
+            // Put the letters in a div in the table cells
+            for (const letter of word) {
+              const letterElement = document.createElement('div');
+              letterElement.classList.add('flip');
+              letterElement.textContent = letter;
+              tableCell.append(letterElement);
+            }
             tableRow.append(tableCell);     // Put flight info in table row
         }
 
