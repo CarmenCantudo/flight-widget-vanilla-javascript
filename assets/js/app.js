@@ -40,9 +40,9 @@ let flights = [
 ]
 
 // More details to make the table update itself
-const destinations = ["TOKYO", "FRANKFURT", "DUBAI", "LONDON", "OMAN", "BEIRUT"]
-const remarks = ["ON TIME", "DELAYED", "CANCELLED"]
-let hour = 15
+const destinations = ["TOKYO", "FRANKFURT", "DUBAI", "LONDON", "OMAN", "BEIRUT", "MALAGA", "DUBLIN", "ROME"];
+const remarks = ["ON TIME", "DELAYED", "CANCELLED"];
+let hour = 15;
 
 // Populate the widget with the information
 function populateTable() {
