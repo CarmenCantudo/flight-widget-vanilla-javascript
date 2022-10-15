@@ -66,6 +66,7 @@
     animation: 0.5s linear flipping;
   }
   
+  /* Animation to flip the letters */
   @keyframes flipping {
     0% {
         transform: rotateX(0deg);
