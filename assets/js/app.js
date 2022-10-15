@@ -52,11 +52,16 @@ function populateTable() {
             const word = Array.from(flight[flightInfo]);
             
             // Put the letters in a div in the table cells
-            for (const letter of word) {
+            for (const [index, letter] of word.entries()) {
               const letterElement = document.createElement('div');
-              letterElement.classList.add('flip');
-              letterElement.textContent = letter;
-              tableCell.append(letterElement);
+
+              // Make each letter flip one after the other
+              setTimeout(() => {
+                letterElement.classList.add('flip');
+                letterElement.textContent = letter;
+                tableCell.append(letterElement);
+              }, 100 * index);
+      
             }
             tableRow.append(tableCell);     // Put flight info in table row
         }
