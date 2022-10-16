@@ -4,6 +4,8 @@
 
 Airport Flight status widget created with JavaScript.
 
+[Live here!](https://carmencantudo.github.io/flight-widget-vanilla-javascript/)
+
 # Gitpod Reminders
 
 To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
