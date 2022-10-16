@@ -49,6 +49,9 @@ function populateTable() {
     // For loop to go through each flight and create a table row
     for (const flight of flights) {
         const tableRow = document.createElement('tr');
+        const tableIcon = document.createElement("td")
+        tableIcon.textContent = "✈"
+        tableRow.append(tableIcon)
 
         for (const flightInfo in flight) {
             // Create each table row for flight info
