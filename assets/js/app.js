@@ -68,12 +68,62 @@ function populateTable() {
               }, 100 * index);
       
             }
-            tableRow.append(tableCell);     // Put flight info in table row
+            // Put flight info in table row
+            tableRow.append(tableCell);
         }
-
         // Add row to table
         tableBody.append(tableRow);
     }
 }
 
-populateTable()
+populateTable();
+
+// Get random letters
+function generateRandomLetter() {
+  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  return alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+}
+
+// Get random numbers
+function generateRandomNumber(maxNumber) {
+  const numbers = "0123456789";
+  if (maxNumber) {
+    const newNumbers = numbers.slice(0, maxNumber);
+    return newNumbers.charAt(Math.floor(Math.random() * newNumbers.length));
+  } else {
+    return numbers.charAt(Math.floor(Math.random() * numbers.length));
+  }
+};
+
+function generateTime() {
+  let displayHour = hour
+  if (hour < 24) {
+    hour++
+  }
+  if (hour >= 24) {
+    hour = 1
+    displayHour = hour
+  }
+  if (hour < 10) {
+    displayHour = "0" + hour
+  }
+  return displayHour +  ":" + generateRandomNumber(5) + generateRandomNumber()
+};
+
+function shuffleUp() {
+  // Get rid of first flight in array
+  flights.shift();
+  // Insert new flight in array to show on the table
+  // Create random flight details
+  flights.push({
+    time: generateTime(),
+    destination: destinations[Math.floor(Math.random() * destinations.length)],
+    flight: generateRandomLetter() + generateRandomLetter() + " " + generateRandomNumber() + generateRandomNumber() + generateRandomNumber(),
+    gate: generateRandomLetter() + " " + generateRandomLetter() + generateRandomLetter(),
+    remarks: remarks[Math.floor(Math.random() * remarks.length)]
+  })
+  tableBody.textContent = "";
+  populateTable();
+};
+
+setInterval(shuffleUp, 5000);
