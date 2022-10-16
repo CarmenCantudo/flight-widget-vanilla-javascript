@@ -1,3 +1,9 @@
+# Flight Widget
+
+![Flight widget gif](assets/images/flight-widget.gif)
+
+Flight widget created with Vanilla JavaScript.
+
 # Gitpod Reminders
 
 To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
