@@ -2,7 +2,7 @@
 
 ![Flight widget gif](assets/images/flight-widget.gif)
 
-Flight widget created with Vanilla JavaScript.
+Airport Flight status widget created with JavaScript.
 
 # Gitpod Reminders
 
